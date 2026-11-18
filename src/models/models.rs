@@ -1,21 +1,20 @@
 use serde::Deserialize;
-
-
+use serde::Serialize;
 
 //main model -- Version Manifest Model
-#[derive(Deserialize, Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct VersionManifestModel {
     pub latest: Latest,
     pub versions: Vec<Version>,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Latest {
     pub release: String,
     pub snapshot: String,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Version {
     pub id: String,

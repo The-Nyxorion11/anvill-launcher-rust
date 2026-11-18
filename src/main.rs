@@ -1,7 +1,6 @@
 mod models;
 mod services;
 
-#[path = "start_config/start_config.rs"]
 mod start_config;
 
 #[tokio::main]
